@@ -1,12 +1,22 @@
 ﻿using System;
 
-namespace client
+using NetMQ;
+using NetMQ.Sockets;
+
+public class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        byte[] msg = System.Text.Encoding.UTF8.GetBytes("Hello");
+
+        using (var client = new RequestSocket())
         {
-            Console.WriteLine("Hello World!");
+            client.Connect("tcp://127.0.0.1:5555");
+            client.SendFrame(msg);
+
+            String feedback = client.ReceiveFrameString();
+            Console.WriteLine(feedback);
         }
+
     }
 }
