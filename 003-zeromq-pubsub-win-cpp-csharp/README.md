@@ -9,24 +9,18 @@ https://gist.github.com/hmartiro/df1eb214f77f549b3691
 ### Environment
 - Windows10, MSYS2 MINGW64, gcc (Rev6, Built by MSYS2 project) 12.2.0
 
-### How to
-
-This is how to build and run.
+### How to - C# client
+How to get NetMQ by using NuGet
 
 ```
-$ mkdir build && cd build
-$ cmake ..
-$ make ..
+PM> NuGet\Install-Package NetMQ -Version 4.0.1.10
 ```
 
-On terminal 1
-```
-$ ./pub
-```
+https://www.nuget.org/packages/NetMQ/
 
-On terminal 2
-```
-$ ./sub
-```
+### How to - C++ server
+How to get NetMQ by using pacman on MSYS2+MINGW64
 
-https://packages.msys2.org/package/mingw-w64-x86_64-zeromq
+```
+$ pacman -S mingw-w64-x86_64-zeromq
+```
