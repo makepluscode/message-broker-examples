@@ -2,8 +2,6 @@
 
 This code is an example to publish and subscribe message using zeromq written in C++ and C# on Windows10.
 
-https://gist.github.com/hmartiro/df1eb214f77f549b3691
-
 <hr/>
 
 ### Environment
